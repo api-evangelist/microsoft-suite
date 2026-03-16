@@ -1,3 +1,4 @@
+aid: microsoft-suite
 name: Microsoft Suite APIs
 description: Collection of APIs for Microsoft's productivity and cloud services suite
 image: https://www.microsoft.com/favicon.ico
@@ -8,7 +9,8 @@ tags:
 - enterprise
 - SaaS
 created: '2024'
-modified: '2024'
+modified: '2026-03-16'
+specificationVersion: '0.19'
 apis:
 - name: Microsoft Graph API
   description: Unified API endpoint for accessing Microsoft 365 services including users, groups, mail, calendars, contacts, files, and more
@@ -122,9 +124,8 @@ apis:
   - type: Embedding
     url: https://docs.microsoft.com/power-bi/developer/embedded/embedding
 maintainers:
-- name: Microsoft
-  email: support@microsoft.com
-  url: https://developer.microsoft.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
 common:
 - type: Terms of Service
   url: https://docs.microsoft.com/legal/termsofuse
