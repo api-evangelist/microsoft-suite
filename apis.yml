@@ -5,9 +5,9 @@ description: >-
 image: https://www.microsoft.com/favicon.ico
 url: https://developer.microsoft.com
 tags:
-  - productivity
-  - cloud
-  - enterprise
+  - Cloud
+  - Enterprise
+  - Productivity
   - SaaS
 created: '2024'
 modified: '2026-03-16'
@@ -21,10 +21,10 @@ apis:
     humanUrl: https://developer.microsoft.com/graph
     baseUrl: https://graph.microsoft.com/v1.0
     tags:
-      - unified-api
-      - microsoft-365
-      - identity
-      - collaboration
+      - Collaboration
+      - Identity
+      - Microsoft-365
+      - Unified-Api
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/graph/api/overview
@@ -43,28 +43,26 @@ apis:
     humanUrl: https://developer.microsoft.com/microsoft-teams
     baseUrl: https://graph.microsoft.com/v1.0/teams
     tags:
-      - collaboration
-      - chat
-      - meetings
-      - bots
+      - Bots
+      - Chat
+      - Collaboration
+      - Meetings
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/microsoftteams/platform/
       - type: Getting Started
-        url: 
-          https://docs.microsoft.com/microsoftteams/platform/get-started/get-started-overview
+        url: https://docs.microsoft.com/microsoftteams/platform/get-started/get-started-overview
       - type: Webhooks
-        url: 
-          https://docs.microsoft.com/microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
+        url: https://docs.microsoft.com/microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
   - name: OneDrive API
     description: >-
       REST API for accessing files stored in OneDrive and SharePoint document libraries.
     humanUrl: https://developer.microsoft.com/onedrive
     baseUrl: https://graph.microsoft.com/v1.0/me/drive
     tags:
-      - storage
-      - files
-      - cloud-storage
+      - Cloud-Storage
+      - Files
+      - Storage
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/onedrive/developer/
@@ -78,9 +76,9 @@ apis:
     humanUrl: https://developer.microsoft.com/outlook
     baseUrl: https://graph.microsoft.com/v1.0/me/messages
     tags:
-      - email
-      - calendar
-      - contacts
+      - Calendar
+      - Contacts
+      - Email
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/graph/outlook-mail-concept-overview
@@ -92,15 +90,14 @@ apis:
     humanUrl: https://developer.microsoft.com/sharepoint
     baseUrl: https://graph.microsoft.com/v1.0/sites
     tags:
-      - collaboration
-      - content-management
-      - intranet
+      - Collaboration
+      - Content-Management
+      - Intranet
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/sharepoint/dev/
       - type: REST API
-        url: 
-          https://docs.microsoft.com/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service
+        url: https://docs.microsoft.com/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service
       - type: Graph API
         url: https://docs.microsoft.com/graph/api/resources/sharepoint
   - name: Azure Active Directory API
@@ -109,28 +106,26 @@ apis:
     humanUrl: https://developer.microsoft.com/identity
     baseUrl: https://graph.microsoft.com/v1.0/users
     tags:
-      - identity
-      - authentication
-      - authorization
-      - security
+      - Authentication
+      - Authorization
+      - Identity
+      - Security
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/azure/active-directory/develop/
       - type: Authentication Flows
-        url: 
-          https://docs.microsoft.com/azure/active-directory/develop/authentication-flows-app-scenarios
+        url: https://docs.microsoft.com/azure/active-directory/develop/authentication-flows-app-scenarios
       - type: Microsoft Identity Platform
-        url: 
-          https://docs.microsoft.com/azure/active-directory/develop/v2-overview
+        url: https://docs.microsoft.com/azure/active-directory/develop/v2-overview
   - name: Power BI API
     description: >-
       Embed Power BI reports and dashboards, and manage Power BI resources programmatically.
     humanUrl: https://developer.microsoft.com/power-bi
     baseUrl: https://api.powerbi.com/v1.0
     tags:
-      - analytics
-      - business-intelligence
-      - visualization
+      - Analytics
+      - Business-Intelligence
+      - Visualization
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/power-bi/developer/
