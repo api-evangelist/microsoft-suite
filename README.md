@@ -1,28 +1,27 @@
-# Microsoft Suite APIs (microsoft-suite)
-Collection of APIs for Microsoft's productivity and cloud services suite
+# Microsoft Suite (microsoft-suite)
+Collection of APIs for Microsoft's productivity and cloud services suite.
 
 **URL:** [Visit APIs.json URL](https://developer.microsoft.com)
 
 ## Tags:
 
- - productivity, cloud, enterprise, SaaS
+ - Cloud, Enterprise, Productivity, SaaS
 
 ## Timestamps
 
-- **Created:** 2024 
-- **Modified:** 2024 
+- **Created:** 2024-01-01
+- **Modified:** 2026-04-28
 
 ## APIs
 
 ### Microsoft Graph API
-Unified API endpoint for accessing Microsoft 365 services including users, groups, mail, calendars, contacts, files, and more
+Unified API endpoint for accessing Microsoft 365 services including users, groups, mail, calendars, contacts, files, and more.
 
 **Human URL:** [https://developer.microsoft.com/graph](https://developer.microsoft.com/graph)
 
-
 #### Tags:
 
- - unified-api, microsoft-365, identity, collaboration
+ - Collaboration, Identity, Microsoft-365, Unified-Api
 
 #### Properties
 
@@ -33,14 +32,13 @@ Unified API endpoint for accessing Microsoft 365 services including users, group
 - [Pricing](https://azure.microsoft.com/pricing/details/active-directory/)
 
 ### Microsoft Teams API
-API for integrating with Microsoft Teams to create bots, tabs, messaging extensions, and connectors
+API for integrating with Microsoft Teams to create bots, tabs, messaging extensions, and connectors.
 
 **Human URL:** [https://developer.microsoft.com/microsoft-teams](https://developer.microsoft.com/microsoft-teams)
 
-
 #### Tags:
 
- - collaboration, chat, meetings, bots
+ - Bots, Chat, Collaboration, Meetings
 
 #### Properties
 
@@ -49,14 +47,13 @@ API for integrating with Microsoft Teams to create bots, tabs, messaging extensi
 - [Webhooks](https://docs.microsoft.com/microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors)
 
 ### OneDrive API
-REST API for accessing files stored in OneDrive and SharePoint document libraries
+REST API for accessing files stored in OneDrive and SharePoint document libraries.
 
 **Human URL:** [https://developer.microsoft.com/onedrive](https://developer.microsoft.com/onedrive)
 
-
 #### Tags:
 
- - storage, files, cloud-storage
+ - Cloud-Storage, Files, Storage
 
 #### Properties
 
@@ -65,14 +62,13 @@ REST API for accessing files stored in OneDrive and SharePoint document librarie
 - [SDKs](https://docs.microsoft.com/onedrive/developer/sdks/)
 
 ### Outlook Mail API
-Access to Outlook mail, calendar, contacts, and tasks via Microsoft Graph
+Access to Outlook mail, calendar, contacts, and tasks via Microsoft Graph.
 
 **Human URL:** [https://developer.microsoft.com/outlook](https://developer.microsoft.com/outlook)
 
-
 #### Tags:
 
- - email, calendar, contacts
+ - Calendar, Contacts, Email
 
 #### Properties
 
@@ -80,14 +76,13 @@ Access to Outlook mail, calendar, contacts, and tasks via Microsoft Graph
 - [REST API Reference](https://docs.microsoft.com/graph/api/resources/mail-api-overview)
 
 ### SharePoint API
-Access SharePoint sites, lists, and content via REST and Microsoft Graph APIs
+Access SharePoint sites, lists, and content via REST and Microsoft Graph APIs.
 
 **Human URL:** [https://developer.microsoft.com/sharepoint](https://developer.microsoft.com/sharepoint)
 
-
 #### Tags:
 
- - collaboration, content-management, intranet
+ - Collaboration, Content-Management, Intranet
 
 #### Properties
 
@@ -96,14 +91,13 @@ Access SharePoint sites, lists, and content via REST and Microsoft Graph APIs
 - [Graph API](https://docs.microsoft.com/graph/api/resources/sharepoint)
 
 ### Azure Active Directory API
-Identity and access management API for authentication and authorization
+Identity and access management API for authentication and authorization.
 
 **Human URL:** [https://developer.microsoft.com/identity](https://developer.microsoft.com/identity)
 
-
 #### Tags:
 
- - identity, authentication, authorization, security
+ - Authentication, Authorization, Identity, Security
 
 #### Properties
 
@@ -112,14 +106,13 @@ Identity and access management API for authentication and authorization
 - [Microsoft Identity Platform](https://docs.microsoft.com/azure/active-directory/develop/v2-overview)
 
 ### Power BI API
-Embed Power BI reports and dashboards, and manage Power BI resources programmatically
+Embed Power BI reports and dashboards, and manage Power BI resources programmatically.
 
 **Human URL:** [https://developer.microsoft.com/power-bi](https://developer.microsoft.com/power-bi)
 
-
 #### Tags:
 
- - analytics, business-intelligence, visualization
+ - Analytics, Business-Intelligence, Visualization
 
 #### Properties
 
@@ -137,6 +130,6 @@ Embed Power BI reports and dashboards, and manage Power BI resources programmati
 
 ## Maintainers
 
-**FN:** Microsoft
+**FN:** Kin Lane
 
-**Email:** support@microsoft.com
+**Email:** kin@apievangelist.com
