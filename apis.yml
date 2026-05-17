@@ -50,7 +50,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/microsoftteams/platform/
-      - type: Getting Started
+      - type: GettingStarted
         url: https://docs.microsoft.com/microsoftteams/platform/get-started/get-started-overview
       - type: Webhooks
         url: https://docs.microsoft.com/microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
@@ -137,13 +137,13 @@ maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
 common:
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://docs.microsoft.com/legal/termsofuse
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://privacy.microsoft.com/
   - type: Support
     url: https://developer.microsoft.com/support
-  - type: Status
+  - type: StatusPage
     url: https://status.dev.microsoft.com/
   - type: Blog
     url: https://developer.microsoft.com/blog
