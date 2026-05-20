@@ -137,6 +137,8 @@ maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
 common:
+  - type: GitHubOrganization
+    url: https://github.com/microsoft
   - type: TermsOfService
     url: https://docs.microsoft.com/legal/termsofuse
   - type: PrivacyPolicy
