@@ -2,14 +2,17 @@
   "repo": "microsoft-suite",
   "feeds": [
     {
-      "source": "https://developer.microsoft.com/en-us/blog/feed/",
-      "error": "HTTPError"
+      "source": "https://developer.microsoft.com/blog/feed",
+      "feed_url": "https://developer.microsoft.com/blog/feed",
+      "title": "",
+      "saved": 3,
+      "method": "feed"
     },
     {
       "source": "https://status.dev.microsoft.com/",
       "error": "URLError"
     }
   ],
-  "post_count": 14,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T12:03:07Z",
+  "post_count": 20
 }
