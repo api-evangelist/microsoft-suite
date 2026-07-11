@@ -137,6 +137,10 @@ maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
 common:
+  - type: DomainSecurity
+    url: security/microsoft-suite-domain-security.yml
+  - type: Authentication
+    url: authentication/microsoft-suite-authentication.yml
   - type: OAuthScopes
     url: scopes/microsoft-suite-scopes.yml
   - type: GitHubOrganization
