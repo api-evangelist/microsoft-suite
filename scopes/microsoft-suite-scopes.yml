@@ -1,0 +1,62 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/microsoft-suite-openapi.yml
+schemes:
+- name: OAuth2
+  source: openapi/microsoft-suite-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+    tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+  - flow: clientCredentials
+    tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+  description: Microsoft identity platform (Microsoft Entra ID) OAuth 2.0
+scopes:
+- scope: Calendars.ReadWrite
+  description: Read/write calendars
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/microsoft-suite-openapi.yml
+- scope: Files.ReadWrite.All
+  description: Read/write all files
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/microsoft-suite-openapi.yml
+- scope: Group.ReadWrite.All
+  description: Read/write all groups
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/microsoft-suite-openapi.yml
+- scope: Mail.Read
+  description: Read user mail
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/microsoft-suite-openapi.yml
+- scope: Mail.Send
+  description: Send mail as user
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/microsoft-suite-openapi.yml
+- scope: User.Read
+  description: Sign-in and read user profile
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/microsoft-suite-openapi.yml
+- scope: User.ReadWrite.All
+  description: Read and write all users
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/microsoft-suite-openapi.yml
+- scope: https://graph.microsoft.com/.default
+  description: Default app permissions
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/microsoft-suite-openapi.yml
