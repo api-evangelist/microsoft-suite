@@ -137,6 +137,8 @@ maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
 common:
+  - type: AgenticAccess
+    url: agentic-access/microsoft-suite-agentic-access.yml
   - type: DomainSecurity
     url: security/microsoft-suite-domain-security.yml
   - type: Authentication
