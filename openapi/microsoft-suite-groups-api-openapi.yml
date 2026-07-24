@@ -1,0 +1,85 @@
+openapi: 3.1.0
+info:
+  title: Microsoft Graph Calendar Groups API
+  description: 'Microsoft Graph is the unified API endpoint for Microsoft 365 services including
+
+    users, groups, mail, calendar, files (OneDrive/SharePoint), Teams, and more.
+
+    This subset captures common v1.0 endpoints documented at
+
+    https://learn.microsoft.com/graph/api/overview.
+
+    '
+  version: v1.0
+  contact:
+    name: Microsoft Graph
+    url: https://learn.microsoft.com/graph/
+servers:
+- url: https://graph.microsoft.com/v1.0
+  description: Microsoft Graph v1.0 (general availability)
+- url: https://graph.microsoft.com/beta
+  description: Microsoft Graph beta (preview)
+security:
+- OAuth2: []
+tags:
+- name: Groups
+paths:
+  /groups:
+    get:
+      summary: List groups
+      operationId: listGroups
+      tags:
+      - Groups
+      responses:
+        '200':
+          description: Groups collection
+    post:
+      summary: Create a group
+      operationId: createGroup
+      tags:
+      - Groups
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Created
+  /groups/{group-id}:
+    get:
+      summary: Get group
+      operationId: getGroup
+      tags:
+      - Groups
+      parameters:
+      - name: group-id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Group
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: Microsoft identity platform (Microsoft Entra ID) OAuth 2.0
+      flows:
+        authorizationCode:
+          authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            User.Read: Sign-in and read user profile
+            User.ReadWrite.All: Read and write all users
+            Mail.Read: Read user mail
+            Mail.Send: Send mail as user
+            Calendars.ReadWrite: Read/write calendars
+            Files.ReadWrite.All: Read/write all files
+            Group.ReadWrite.All: Read/write all groups
+        clientCredentials:
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            https://graph.microsoft.com/.default: Default app permissions

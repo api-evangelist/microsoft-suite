@@ -1,0 +1,56 @@
+openapi: 3.1.0
+info:
+  title: Microsoft Graph Calendar Teams API
+  description: 'Microsoft Graph is the unified API endpoint for Microsoft 365 services including
+
+    users, groups, mail, calendar, files (OneDrive/SharePoint), Teams, and more.
+
+    This subset captures common v1.0 endpoints documented at
+
+    https://learn.microsoft.com/graph/api/overview.
+
+    '
+  version: v1.0
+  contact:
+    name: Microsoft Graph
+    url: https://learn.microsoft.com/graph/
+servers:
+- url: https://graph.microsoft.com/v1.0
+  description: Microsoft Graph v1.0 (general availability)
+- url: https://graph.microsoft.com/beta
+  description: Microsoft Graph beta (preview)
+security:
+- OAuth2: []
+tags:
+- name: Teams
+paths:
+  /teams:
+    get:
+      summary: List teams
+      operationId: listTeams
+      tags:
+      - Teams
+      responses:
+        '200':
+          description: Teams
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: Microsoft identity platform (Microsoft Entra ID) OAuth 2.0
+      flows:
+        authorizationCode:
+          authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            User.Read: Sign-in and read user profile
+            User.ReadWrite.All: Read and write all users
+            Mail.Read: Read user mail
+            Mail.Send: Send mail as user
+            Calendars.ReadWrite: Read/write calendars
+            Files.ReadWrite.All: Read/write all files
+            Group.ReadWrite.All: Read/write all groups
+        clientCredentials:
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            https://graph.microsoft.com/.default: Default app permissions
