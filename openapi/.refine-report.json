@@ -1,0 +1,26 @@
+{
+  "provider": "microsoft-suite",
+  "sources": [
+    "microsoft-suite-calendar-api-openapi.yml",
+    "microsoft-suite-files-api-openapi.yml",
+    "microsoft-suite-groups-api-openapi.yml",
+    "microsoft-suite-mail-api-openapi.yml",
+    "microsoft-suite-subscriptions-api-openapi.yml",
+    "microsoft-suite-teams-api-openapi.yml",
+    "microsoft-suite-users-api-openapi.yml"
+  ],
+  "outputs": [
+    "microsoft-suite-calendar-api-openapi.yml",
+    "microsoft-suite-files-api-openapi.yml",
+    "microsoft-suite-groups-api-openapi.yml",
+    "microsoft-suite-mail-api-openapi.yml",
+    "microsoft-suite-subscriptions-api-openapi.yml",
+    "microsoft-suite-teams-api-openapi.yml",
+    "microsoft-suite-users-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

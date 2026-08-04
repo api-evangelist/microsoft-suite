@@ -1,0 +1,280 @@
+openapi: 3.1.0
+info:
+  title: Microsoft Graph API
+  description: |
+    Microsoft Graph is the unified API endpoint for Microsoft 365 services including
+    users, groups, mail, calendar, files (OneDrive/SharePoint), Teams, and more.
+    This subset captures common v1.0 endpoints documented at
+    https://learn.microsoft.com/graph/api/overview.
+  version: v1.0
+  contact:
+    name: Microsoft Graph
+    url: https://learn.microsoft.com/graph/
+servers:
+  - url: https://graph.microsoft.com/v1.0
+    description: Microsoft Graph v1.0 (general availability)
+  - url: https://graph.microsoft.com/beta
+    description: Microsoft Graph beta (preview)
+security:
+  - OAuth2: []
+paths:
+  /me:
+    get:
+      summary: Get signed-in user profile
+      description: Returns the profile of the signed-in user.
+      operationId: getMe
+      tags: [Users]
+      responses:
+        '200':
+          description: User profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+  /me/photo/$value:
+    get:
+      summary: Get signed-in user photo
+      operationId: getMePhoto
+      tags: [Users]
+      responses:
+        '200':
+          description: Photo binary
+          content:
+            image/jpeg: {}
+  /users:
+    get:
+      summary: List users
+      operationId: listUsers
+      tags: [Users]
+      parameters:
+        - $ref: '#/components/parameters/Select'
+        - $ref: '#/components/parameters/Filter'
+        - $ref: '#/components/parameters/Top'
+      responses:
+        '200':
+          description: Collection of users
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserCollection'
+  /users/{id}:
+    get:
+      summary: Get user by id or principal name
+      operationId: getUser
+      tags: [Users]
+      parameters:
+        - $ref: '#/components/parameters/UserId'
+      responses:
+        '200':
+          description: User
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+  /me/manager:
+    get:
+      summary: Get the signed-in user's manager
+      operationId: getMeManager
+      tags: [Users]
+      responses:
+        '200':
+          description: Manager
+  /me/directReports:
+    get:
+      summary: List the signed-in user's direct reports
+      operationId: listMeDirectReports
+      tags: [Users]
+      responses:
+        '200':
+          description: Direct reports collection
+  /me/messages:
+    get:
+      summary: List signed-in user's mail messages
+      operationId: listMeMessages
+      tags: [Mail]
+      responses:
+        '200':
+          description: Messages collection
+  /me/sendMail:
+    post:
+      summary: Send mail as the signed-in user
+      operationId: sendMail
+      tags: [Mail]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: object
+                saveToSentItems:
+                  type: boolean
+      responses:
+        '202':
+          description: Accepted
+  /me/events:
+    get:
+      summary: List signed-in user's calendar events
+      operationId: listMeEvents
+      tags: [Calendar]
+      responses:
+        '200':
+          description: Events
+  /me/calendar/events:
+    post:
+      summary: Create a calendar event
+      operationId: createCalendarEvent
+      tags: [Calendar]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Event created
+  /me/drive/root/children:
+    get:
+      summary: List items in signed-in user's OneDrive root
+      operationId: listDriveRootChildren
+      tags: [Files]
+      responses:
+        '200':
+          description: Drive items
+  /me/drive/items/{item-id}:
+    get:
+      summary: Get a drive item
+      operationId: getDriveItem
+      tags: [Files]
+      parameters:
+        - name: item-id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: Drive item
+  /groups:
+    get:
+      summary: List groups
+      operationId: listGroups
+      tags: [Groups]
+      responses:
+        '200':
+          description: Groups collection
+    post:
+      summary: Create a group
+      operationId: createGroup
+      tags: [Groups]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Created
+  /groups/{group-id}:
+    get:
+      summary: Get group
+      operationId: getGroup
+      tags: [Groups]
+      parameters:
+        - name: group-id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: Group
+  /teams:
+    get:
+      summary: List teams
+      operationId: listTeams
+      tags: [Teams]
+      responses:
+        '200':
+          description: Teams
+  /subscriptions:
+    get:
+      summary: List change notification subscriptions
+      operationId: listSubscriptions
+      tags: [Subscriptions]
+      responses:
+        '200':
+          description: Subscriptions
+    post:
+      summary: Create a change notification subscription
+      operationId: createSubscription
+      tags: [Subscriptions]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Created
+components:
+  parameters:
+    UserId:
+      name: id
+      in: path
+      required: true
+      schema: { type: string }
+      description: User id or userPrincipalName.
+    Select:
+      name: $select
+      in: query
+      schema: { type: string }
+    Filter:
+      name: $filter
+      in: query
+      schema: { type: string }
+    Top:
+      name: $top
+      in: query
+      schema: { type: integer }
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: Microsoft identity platform (Microsoft Entra ID) OAuth 2.0
+      flows:
+        authorizationCode:
+          authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            User.Read: Sign-in and read user profile
+            User.ReadWrite.All: Read and write all users
+            Mail.Read: Read user mail
+            Mail.Send: Send mail as user
+            Calendars.ReadWrite: Read/write calendars
+            Files.ReadWrite.All: Read/write all files
+            Group.ReadWrite.All: Read/write all groups
+        clientCredentials:
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            https://graph.microsoft.com/.default: Default app permissions
+  schemas:
+    User:
+      type: object
+      properties:
+        id: { type: string }
+        displayName: { type: string }
+        userPrincipalName: { type: string }
+        mail: { type: string }
+        jobTitle: { type: string }
+    UserCollection:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/User'
+        '@odata.nextLink':
+          type: string
