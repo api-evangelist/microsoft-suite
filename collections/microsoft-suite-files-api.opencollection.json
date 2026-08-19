@@ -1,0 +1,58 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Microsoft Graph Calendar Files API",
+    "version": "v1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Files",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List items in signed-in user's OneDrive root",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://graph.microsoft.com/v1.0/me/drive/root/children"
+          },
+          "docs": "List items in signed-in user's OneDrive root"
+        },
+        {
+          "info": {
+            "name": "Get a drive item",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://graph.microsoft.com/v1.0/me/drive/items/:item-id",
+            "params": [
+              {
+                "name": "item-id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a drive item"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
