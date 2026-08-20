@@ -21,6 +21,11 @@ tags:
   - Cloud
   - Enterprise
   - Productivity
+  - Software-as-a-Service
+tags_raw:
+  - Cloud
+  - Enterprise
+  - Productivity
   - SaaS
 created: '2024'
 modified: '2026-04-28'
@@ -49,6 +54,10 @@ apis:
   humanUrl: https://developer.microsoft.com/onedrive
   baseUrl: https://graph.microsoft.com/v1.0/me/drive
   tags:
+  - Cloud Storage
+  - File
+  - Storage
+  tags_raw:
   - Cloud-Storage
   - Files
   - Storage
@@ -77,6 +86,10 @@ apis:
   humanUrl: https://developer.microsoft.com/sharepoint
   baseUrl: https://graph.microsoft.com/v1.0/sites
   tags:
+  - Collaboration
+  - Content Management
+  - Intranet
+  tags_raw:
   - Collaboration
   - Content-Management
   - Intranet
@@ -111,6 +124,10 @@ apis:
   baseUrl: https://api.powerbi.com/v1.0
   tags:
   - Analytics
+  - Business Intelligence
+  - Visualization
+  tags_raw:
+  - Analytics
   - Business-Intelligence
   - Visualization
   properties:
@@ -140,6 +157,8 @@ apis:
   name: Microsoft Suite Files API
   description: The Files API from Microsoft Suite — 2 operation(s) for files.
   tags:
+  - File
+  tags_raw:
   - Files
   properties:
   - type: OpenAPI
@@ -156,6 +175,8 @@ apis:
   name: Microsoft Suite Groups API
   description: The Groups API from Microsoft Suite — 2 operation(s) for groups.
   tags:
+  - Group
+  tags_raw:
   - Groups
   properties:
   - type: OpenAPI
@@ -188,6 +209,8 @@ apis:
   name: Microsoft Suite Subscriptions API
   description: The Subscriptions API from Microsoft Suite — 1 operation(s) for subscriptions.
   tags:
+  - Subscription
+  tags_raw:
   - Subscriptions
   properties:
   - type: OpenAPI
@@ -204,6 +227,8 @@ apis:
   name: Microsoft Suite Teams API
   description: The Teams API from Microsoft Suite — 1 operation(s) for teams.
   tags:
+  - Team
+  tags_raw:
   - Teams
   properties:
   - type: OpenAPI
@@ -220,6 +245,8 @@ apis:
   name: Microsoft Suite Users API
   description: The Users API from Microsoft Suite — 6 operation(s) for users.
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
