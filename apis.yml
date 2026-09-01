@@ -66,7 +66,7 @@ apis:
   humanUrl: https://developer.microsoft.com/onedrive
   baseUrl: https://graph.microsoft.com/v1.0/me/drive
   tags:
-  - Cloud-Storage
+  - Cloud Storage
   - File
   - Storage
   tags_raw:
@@ -99,7 +99,7 @@ apis:
   baseUrl: https://graph.microsoft.com/v1.0/sites
   tags:
   - Collaboration
-  - Content-Management
+  - Content Management
   - Intranet
   tags_raw:
   - Collaboration
@@ -136,7 +136,7 @@ apis:
   baseUrl: https://api.powerbi.com/v1.0
   tags:
   - Analytics
-  - Business-Intelligence
+  - Business Intelligence
   - Visualization
   tags_raw:
   - Analytics
