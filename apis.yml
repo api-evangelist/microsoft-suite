@@ -275,6 +275,8 @@ maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
 common:
+  - type: Website
+    url: https://www.microsoft.com/
   - type: AgenticAccess
     url: agentic-access/microsoft-suite-agentic-access.yml
   - type: DomainSecurity
@@ -295,3 +297,5 @@ common:
     url: https://status.dev.microsoft.com/
   - type: Blog
     url: https://developer.microsoft.com/blog
+x-parent: microsoft
+x-relationship: product
